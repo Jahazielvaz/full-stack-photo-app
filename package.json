@@ -2,7 +2,7 @@
   "name": "full-stack-photo-app",
   "version": "1.0.0",
   "description": "a picture uploader app so users can, have an account where they can upload and track their pictures.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon bin/www"
   },
