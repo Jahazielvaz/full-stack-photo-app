@@ -8,7 +8,7 @@ Password
 
 ## Image
 Img_ID
-Image URL (S3)
+Image URL (S3) VARCHAR(250) notNull UNIQUE;
 
 ## Comments
 Comment_ID
@@ -25,7 +25,7 @@ User_ID (FK)
 
 ## Tags
 Tag_ID
-Keyword (Tag)
+Keyword (Tag) VARCHAR(250) notNull;
 
 ## Pivot Table
 ID
