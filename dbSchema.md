@@ -5,19 +5,23 @@
 - FirstName
 - LastName
 - Username
+  * Type: text
+  * Constraints: at least 5 characters, unique, not-null
 - Email
 - Password
 
 ## Image
 - Img_ID
 - Image URL (S3)
-  * VARCHAR(250) notNull UNIQUE;
+  * Type: text
+  * Constraints: not-null, unique
 
 ## Comments
 - Comment_ID
   * Constraints: serial primary
 - Content (Comment)
-  * Constraints: text, not-null, a certain set amount of characters.  
+  * Type: text
+  * Constraints: not-null, a certain set amount of characters
 - User_ID (Foreign Key)
 - Img_ID  (Foreign Key)
 
@@ -29,7 +33,8 @@
 ## Tags
 - Tag_ID
 - Keyword (Tag)   
-  * VARCHAR(250) notNull;
+  * Type: text
+  * Constraints: not-null
 
 ## Pivot Table
 - ID
