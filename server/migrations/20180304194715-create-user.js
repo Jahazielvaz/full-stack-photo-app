@@ -10,12 +10,11 @@ module.exports = {
       },
       firstName: {
         type: Sequelize.STRING,
-        validate: {
-          is: ["^[a-z]+$",'i']
-        }
+        allowNull: false
       },
       lastName: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       userName: {
         type: Sequelize.STRING,
