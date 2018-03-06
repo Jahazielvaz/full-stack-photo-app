@@ -2,7 +2,7 @@
   "development": {
     "username": "mattmortensen",
     "password": "blackshoes01",
-    "database": "exampledb",
+    "database": "full_stack_photo_app",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

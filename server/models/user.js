@@ -9,6 +9,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     firstName: {
       type: DataTypes.STRING,
+      validate: {
+        is: ["^[a-z]+$",'i']
+      }
     },
     lastName: {
       type: DataTypes.STRING,
@@ -18,6 +21,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     email: {
       type: DataTypes.STRING,
+      validate: {
+        isEmail: true
+      }
     },
     password: {
       type: DataTypes.STRING,

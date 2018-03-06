@@ -9,7 +9,10 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       firstName: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        validate: {
+          is: ["^[a-z]+$",'i']
+        }
       },
       lastName: {
         type: Sequelize.STRING
@@ -18,7 +21,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       email: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        validate: {
+          isEmail: true
+        }
       },
       password: {
         type: Sequelize.STRING

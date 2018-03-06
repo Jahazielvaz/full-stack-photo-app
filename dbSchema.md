@@ -23,6 +23,7 @@
 ## Image
 - Img_ID
   * Type: integer
+  * Constraints: serial primary
 - Image URL (S3)
   * Type: text
   * Constraints: not-null, unique
