@@ -26,6 +26,9 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
+      testCol: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
