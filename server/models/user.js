@@ -9,10 +9,23 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
+    userName {
+      type: DataTypes.STRING,
+      validate: {
+        min: 5
+      }
+    },
     email: {
       type: DataTypes.STRING,
       validate: {
         isEmail: true
+      }
+    },
+    password: {
+      type: DataTypes.STRING,
+      validate: {
+        min: 8,
+        is: '^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$'
       }
     }
   }, {
@@ -22,5 +35,5 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   });
-  return Todo;
+  return User;
 };

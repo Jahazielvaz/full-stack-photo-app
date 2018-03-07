@@ -18,7 +18,7 @@
   * Constraints: unique, not-null
 - Password
   * Type: text
-  * Constraints: one cap letter, one symbol, and minimum of 8 characters
+  * Constraints: one cap letter, one symbol, one number, and minimum of 8 characters
 
 ## Image
 - Img_ID
