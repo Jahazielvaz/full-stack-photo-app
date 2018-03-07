@@ -28,12 +28,14 @@ module.exports = (sequelize, DataTypes) => {
         is: '^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$'
       }
     }
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
   });
+
+  User.associate = (models) => {
+    User.hasMany(models.imagePost, {
+      foreignKey: 'userId',
+      as: 'Users',
+    });
+  };
+
   return User;
 };

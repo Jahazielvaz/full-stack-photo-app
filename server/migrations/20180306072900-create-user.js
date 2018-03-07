@@ -2,7 +2,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('Users', {
-      user_ID: {
+      id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
@@ -29,7 +29,6 @@ module.exports = {
         validate: {
           is: '^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$'
         }
-
       },
       createdAt: {
         allowNull: false,
