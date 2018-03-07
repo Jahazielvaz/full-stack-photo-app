@@ -2,7 +2,7 @@
 
 //Belongs to many
 
-module.exports = function(sequelize, DataTypes){
+module.exports = (sequelize, DataTypes) => {
   let Comments = sequelize.define('comments', {
     content: {
       type: DataTypes.STRING,
