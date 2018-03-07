@@ -36,17 +36,24 @@
   * Type: text
   * Constraints: not-null, a certain set amount of characters
 - User_ID (Foreign Key)
+  * Type: integer
+
 - Img_ID  (Foreign Key)
+  * Type: integer
 
 ## Post
 - Post_ID
   * Type: integer
+  * Constraints: serial primary
 - Img_ID (Foreign Key)
+  * Type: integer
 - User_ID (FK)
+  * Type: integer
 
 ## Tags
 - Tag_ID
   * Type: integer
+  * Constraints: serial primary
 - Keyword (Tag)   
   * Type: text
   * Constraints: not-null
@@ -54,5 +61,8 @@
 ## Pivot Table
 - ID
   * Type: integer
+  * Constraints: serial primary
 - Tag_ID
+  * Type: integer
 - Post_ID
+  * Type: integer
