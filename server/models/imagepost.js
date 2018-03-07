@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     imagePost.hasOne(models.Image, {
-      
+
     });
   };
 
