@@ -1,2 +1,2 @@
 To do:
-  Plan app routes ( which is urls)1
+  Plan app routes ( which is urls)
