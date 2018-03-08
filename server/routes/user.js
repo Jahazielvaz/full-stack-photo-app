@@ -1,11 +1,11 @@
 let User = require('../models').User;
 
 User.create({
-  first_name: 'Mattywoo',
-  last_name: 'spankyspank',
-  user_name: 'codeslum',
-  email: 'impissed300@impissed.com',
-  password: 'angrypuppies'
+  first_name: null,
+  last_name: null,
+  user_name: null,
+  email: null,
+  password: null
 }).then(function(user){
   console.log(user);
 });
