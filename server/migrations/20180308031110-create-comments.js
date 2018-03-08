@@ -23,6 +23,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
+      //Heres my association with Comment-to-Image
       img_id: {
         type: Sequelize.INTEGER,
         references: {
