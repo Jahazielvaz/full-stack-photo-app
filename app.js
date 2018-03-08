@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const urlEncoded = bodyParser.urlencoded({extended: false});
+const logger = require('morgan');
 
 const app = express();
 const path = require('path');
