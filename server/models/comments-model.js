@@ -9,18 +9,16 @@ module.exports = (sequelize, DataTypes) => {
       isNull: false,
       validate:{
         len: [10, 1300]
-      },
-      {
-        //I don't remember the foreign key and associations syntax
       }
     }
 
-    return Comments;
+
   });
+  return Comments;
 
   // Comments.associate = function(models){
   //   Comments.belongsTo(models.user, {
   //     foreignKey: ''
   //   })
-  }
+
 }

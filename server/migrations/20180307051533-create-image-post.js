@@ -15,25 +15,25 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      },
-      userId: {
-        type: Sequelize.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'Users',
-          key: 'id',
-          as: 'userId',
-        },
-      },
-      imageId: {
-        type: Sequelize.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'Image',
-          key: 'id',
-          as: 'imageId',
-        },
       }
+      // userId: {
+      //   type: Sequelize.INTEGER,
+      //   onDelete: 'CASCADE',
+      //   references: {
+      //     model: 'Users',
+      //     key: 'id',
+      //     as: 'userId',
+      //   },
+      // },
+      // imageId: {
+      //   type: Sequelize.INTEGER,
+      //   onDelete: 'CASCADE',
+      //   references: {
+      //     model: 'Image',
+      //     key: 'id',
+      //     as: 'imageId',
+      //   },
+      // }
     });
   },
   down: (queryInterface, Sequelize) => {
