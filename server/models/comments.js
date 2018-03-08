@@ -14,8 +14,13 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.STRING
     }
   }, {});
+
   Comments.associate = function(models) {
     // associations can be defined here
+    Comments.belongsTo(models.Image, {
+      foreignKey: 'image'
+    })
   };
+
   return Comments;
 };

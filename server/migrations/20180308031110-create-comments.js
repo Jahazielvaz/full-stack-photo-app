@@ -15,9 +15,6 @@ module.exports = {
       user_id: {
         type: Sequelize.INTEGER
       },
-      img_id: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -25,6 +22,13 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      img_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Images',
+          key: 'id'
+        }
       }
     });
   },
