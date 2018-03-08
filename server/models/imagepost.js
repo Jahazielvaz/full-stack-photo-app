@@ -1,6 +1,13 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var imagePost = sequelize.define('imagePost', {});
+  var imagePost = sequelize.define('imagePost', {
+    userId: {
+      type: DataTypes.INTEGER,
+    },
+    imageId: {
+      type: DataTypes.INTEGER
+    }
+  });
 
   imagePost.associate = (models) => {
     imagePost.belongsTo(models.User, {
@@ -8,8 +15,9 @@ module.exports = (sequelize, DataTypes) => {
       onDelete: 'CASCADE',
     });
 
-    imagePost.hasOne(models.Image, {
-
+    imagePost.belongsTo(models.Images, {
+      foreignKey: 'imageId',
+      onDelete: 'CASCADE',
     });
   };
 

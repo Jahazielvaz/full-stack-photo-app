@@ -25,6 +25,15 @@ module.exports = {
           as: 'userId',
         },
       },
+      imageId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Image',
+          key: 'id',
+          as: 'imageId',
+        },
+      }
     });
   },
   down: (queryInterface, Sequelize) => {
