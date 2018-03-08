@@ -9,7 +9,13 @@ module.exports = (sequelize, DataTypes) => {
         unique: true
       }
     }
-
   });
+
+  Images.associate = (models) => {
+    Images.hasOne(models.imagePost, {
+      foreignKey: 'imageId',
+      as: 'Image'
+    })
+  }
   return Images;
 };
