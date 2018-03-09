@@ -16,11 +16,9 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
 
   Comments.associate = function(models) {
-    // here i'm declairing my association but not too sure what much else to add, 
+    // here i'm declairing my association but not too sure what much else to add,
     // still need to test
-    Comments.belongsTo(models.Image, {
-      foreignKey: 'image'
-    })
+    Comments.belongsTo(models.Image)
   };
 
   return Comments;
