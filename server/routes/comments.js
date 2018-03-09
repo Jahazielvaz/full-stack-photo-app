@@ -1,5 +1,9 @@
-let Comments = require('../models').Comments;
+const Comments = require('../controllers/comments.js');
 
-Comments.create({
-  content: null;
-});
+
+module.exports = (app) => {
+  app.get('/', function(req, res, next){
+    res.render('comments.ejs');
+  });
+  app.post('/', Comments.createComment);
+}
