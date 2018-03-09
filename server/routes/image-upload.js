@@ -1,10 +1,12 @@
-const image = require('./server/models').Image;
-const app = require('../app');
-const router = express
+const Image = require('../controllers/image.js');
+
 
 module.exports = (app) => {
-  app.get('/imageuploads', (req, res) =>{
+  app.get('/imageuploads', (req, res, next) =>{
     res.render('image-upload.ejs');
+    next();
   });
+
+  app.post('/imageuploads', Image.createImage);
 
 }

@@ -1,5 +1,12 @@
 let Image = require('../models').Image;
 
-Image.create({
-  url: 'http://googledslsds.com'
-});
+
+module.exports = {
+  createImage (req, res) {
+    return Image.create({
+      testColumn: req.body.testColumn,
+    })
+    .then(image => res.send(image))
+    .catch(error => res.send(error));
+  },
+}

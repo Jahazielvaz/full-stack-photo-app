@@ -8,7 +8,8 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      url: {
+      testColumn: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       createdAt: {
