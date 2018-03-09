@@ -1,9 +1,11 @@
 let Comments = require('../models').Comments;
 
-module.exports = (User, Img) => {
-
-Comments.create({
-  content: null
-})
-
+module.exports = {
+  createComment (req, res) {
+    return Comments.create({
+      content: req.body.content
+    });
+  }
 }
+
+module.exports = Comments;
