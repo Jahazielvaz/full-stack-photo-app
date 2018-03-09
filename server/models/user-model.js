@@ -3,33 +3,23 @@ module.exports = (sequelize, DataTypes) => {
   var User = sequelize.define('User', {
     first_name: {
       type:DataTypes.STRING,
-      validate:{
-        isNull: false
-      }
+      allowNull: false
     },
     last_name: {
       type:DataTypes.STRING,
-      validate:{
-        isNull: false
-      }
+      allowNull: false
     },
     user_name: {
       type:DataTypes.STRING,
-      validate:{
-        isNull: false
-      }
+      allowNull: false
     },
     email: {
       type:DataTypes.STRING,
-      validate:{
-        isNull: false
-      }
+      allowNull: false
     },
     password: {
       type:DataTypes.STRING,
-      validate:{
-        isNull: false
-      }
+      allowNull: false
     },
 
   }, {});
