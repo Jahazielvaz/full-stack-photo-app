@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Image = sequelize.define('Image', {
-    testColumn: {
+    url: {
       type: DataTypes.STRING
     }
   }, {});
