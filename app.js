@@ -14,6 +14,7 @@ app.use(urlEncoded);
 app.use(express.static(path.join(__dirname, 'statics')));
 
 const userRoutes = require('./server/routes/user-route.js')(app);
+const imageRoutes = require('./server/routes/image-upload.js')(app);
 const commentsRoute = require('./server/routes/comments.js')(app);
 
 
