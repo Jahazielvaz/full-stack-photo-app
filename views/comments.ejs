@@ -7,29 +7,26 @@
 
  <body>
 
-  <form method="POST">
+  <form action="/" method="POST">
 
    <label> Comment: <br>
-    <textarea name="Comment" class="Input" style="width: 300px" required></textarea>
+    <input name="comments" class="Input">
    </label>
    <br><br>
    <input type="submit" name="Submit" value="Submit Comment" class="Submit">
-   <button id="myBtn">Try it</button>
 
    <p id="comment"></p>
 
-   <script>
+   <!-- <script>
    document.getElementById("myBtn").addEventListener("click", displayComment);
 
    function displayComment() {
        document.getElementById("comment").innerHTML = comment();
    }
-   </script>
+   </script> -->
 
   </form>
 
  </body>
 
 </html>
-
-}﻿
