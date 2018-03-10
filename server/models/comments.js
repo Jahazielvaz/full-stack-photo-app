@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4
       },
-      comment: {
+      content: {
         type:DataTypes.STRING,
         validate:{
           len: [5, 2000]

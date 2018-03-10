@@ -3,10 +3,9 @@ let Comments = require('../models').Comments;
 module.exports = {
   createComment (req, res) {
     return Comments.create({
-      comment: req.body.comment,
-      user_id: req.body.user_id
+      content: req.body.content
     })
-    .then(comment => res.send(comment))
+    .then(content => res.send(content))
     .catch(error => res.send(error));
   },
 }
