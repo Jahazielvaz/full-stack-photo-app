@@ -1,20 +1,28 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Comments = sequelize.define('Comments', {
-    content: {
-      type:DataTypes.STRING,
-      validate:{
-        len: [5, 2000]
+      id: {
+        allowNull: false,
+        primaryKey: true,
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4
+      },
+      content: {
+        type:DataTypes.STRING,
+        validate:{
+          len: [5, 2000]
+        }
       }
-    }
-  }, {});
-
-  Comments.associate = function(models) {
-    Comments.belongsTo(models.Image, {
-      // foreignKey: 'image'
-
+    }, {
+      classMethods: {
+        associate: function(models) {
+          Comments.belongsTo(models.User, {
+            foreignKey: 'user_id',
+            onDelete: 'CASCADE'
+          });
+        }
+      }
     });
-  };
 
   return Comments;
 };

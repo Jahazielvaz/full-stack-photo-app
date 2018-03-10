@@ -4,16 +4,21 @@ module.exports = {
     return queryInterface.createTable('Comments', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4
       },
       content: {
         type: Sequelize.STRING,
         allowNull: false
       },
       user_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Users',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
@@ -22,14 +27,6 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      },
-      //Heres my association with Comment-to-Image
-      img_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Images',
-          key: 'id'
-        }
       }
     });
   },

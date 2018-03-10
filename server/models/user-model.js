@@ -1,30 +1,43 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var User = sequelize.define('User', {
-    first_name: {
-      type:DataTypes.STRING,
-      allowNull: false
-    },
-    last_name: {
-      type:DataTypes.STRING,
-      allowNull: false
-    },
-    user_name: {
-      type:DataTypes.STRING,
-      allowNull: false
-    },
-    email: {
-      type:DataTypes.STRING,
-      allowNull: false
-    },
-    password: {
-      type:DataTypes.STRING,
-      allowNull: false
-    },
+      id: {
+        allowNull: false,
+        primaryKey: true,
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4
+      },
+      first_name: {
+        type:DataTypes.STRING,
+        allowNull: false
+      },
+      last_name: {
+        type:DataTypes.STRING,
+        allowNull: false
+      },
+      user_name: {
+        type:DataTypes.STRING,
+        allowNull: false
+      },
+      email: {
+        type:DataTypes.STRING,
+        allowNull: false
+      },
+      password: {
+        type:DataTypes.STRING,
+        allowNull: false
+      },
 
-  }, {});
-  User.associate = function(models) {
-    // associations can be defined here
-  };
+    }, {
+      classMethods: {
+        associate: function(models) {
+          User.hasMany(models.Comment, {
+            foreignKey: 'user_id',
+            onDelete: 'CASCADE'
+          });
+        }
+      }
+    });
+
   return User;
 };
