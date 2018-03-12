@@ -3,29 +3,29 @@ const User = require('../models').User;
 
 module.exports = (passport) => {
 
-  passport.serializeUser((user, done) => {
+  passport.serializeUser(function(user, done) {
     done(null, user.id);
   });
 
-  passport.deserializeUser((id, done) => {
-    User.findById(id, (err,user) => {
+  passport.deserializeUser(function(id, done) {
+    User.findById(id, function(err,user) {
       done(err, user);
     });
   });
 
   passport.use('local-signup', new LocalStrategy({
-  {
     usernameField: 'email',
     passwordField: 'password',
     passReqToCallback: true
   },
 
   function(req, email, password, done) {
-    User.findOne({'email': email}, (err, user) {
+    User.findOne({ where: {'email': email} }).then((err, user) => {
       if(err) return done(err);
       if(user) {
         return done(null, false, req.flash('signupMessage', 'That email is already taken.'));
       } else {
+
         let newUser = User.create({
           first_name: req.body.first_name,
           last_name: req.body.last_name,
@@ -37,8 +37,6 @@ module.exports = (passport) => {
         .catch(error => done(error));
       }
     })
-  }
-
   }));
 
 

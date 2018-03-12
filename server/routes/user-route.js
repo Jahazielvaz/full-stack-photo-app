@@ -1,6 +1,5 @@
 
 module.exports = (app, passport) => {
-  require('../config/local-strategy.js')(passport);
 
   app.get('/signup', (req, res, next) => {
     res.render('signup', {message: req.flash('signupMessage')});

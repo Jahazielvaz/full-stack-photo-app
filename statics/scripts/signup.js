@@ -18,7 +18,9 @@ $(function() {
       "password": password.val()
     }
 
-    $.post('/signup', dataToSend);
+    $.post('/signup', dataToSend, (data) => {
+      console.log(data);
+    });
 
 
 
