@@ -5,5 +5,5 @@ module.exports = (app) => {
   app.get('/comments', function(req, res, next){
     res.render('comments.ejs');
   });
-  app.post('/', Comments.createComment, url.createImage);
+  app.post('/', Comments.createComment, url.createImage)
 }

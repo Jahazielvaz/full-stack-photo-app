@@ -3,11 +3,14 @@ const bodyParser = require('body-parser');
 const urlEncoded = bodyParser.urlencoded({extended: false});
 const logger = require('morgan');
 const multer = require('multer');
+const cookieParser = require('cookie-parser');
+
 
 const app = express();
 const path = require('path');
 
 
+app.use(cookieParser());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(urlEncoded);
