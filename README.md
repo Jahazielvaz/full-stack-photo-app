@@ -13,6 +13,10 @@
 Here's what you need to do to get started:
    * Clone the repo onto your local machine using `git clone`
    * You'll then want to `npm install` for your dependencies
+   * After installing then run the app, using `npm start`
+   * Head to `localhost:9000` to arrive at the Welcome Page.
+   * Click Sign-up, fill out the form, and submit.
+   * You can then upload your image from the profile page as well as logout. 
 ___
 
 ## TECHNOLOGIES USED IN THIS PROJECT:
