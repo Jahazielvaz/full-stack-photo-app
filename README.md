@@ -1,12 +1,8 @@
 # FULL STACK PHOTO APP
 
 ## PROJECT DESCRIPTION:
-##### This is a picture uploader app so users can, have an account where they can upload and track their pictures.
--------------------------------------------------------------------------------------------------------------
-
-
-
-
+ This is a picture uploader app so users can, have an account where they can upload and track their pictures.
+ ___
 
 ## INSTRUCTIONS:
 
@@ -16,11 +12,17 @@ Here's what you need to do to get started:
    * After installing then run the app, using `npm start`
    * Head to `localhost:9000` to arrive at the Welcome Page.
    * Click Sign-up, fill out the form, and submit.
-   * You can then upload your image from the profile page as well as logout. 
+   * You can then upload your image from the profile page as well as logout.
 ___
 
 ## TECHNOLOGIES USED IN THIS PROJECT:
- These are all the technologies you're going to need in order to run this project
+ These are all the technologies you're going to need in order to run this project:
+  * Node JS
+  * Express
+  * EJS
+  * Passport JS
+  * AWS S3
+  * Multer
 ___
 
 ## USER STORIES:
