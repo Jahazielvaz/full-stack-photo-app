@@ -7,8 +7,12 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="scripts/cookies.js"></script>
 </head>
 <body>
+  <% if (message.length > 0) { %>
+     <div><%= message %></div>
+ <% } %>
     <form id="createuser" method="POST" action="forum.html">
       <input type="text" name="first_name" id="first_name">
       <input type="text" name="last_name" id="last_name">
@@ -20,6 +24,6 @@
     <!-- This is going to be our homepage file -->
 
 
-    <script type="text/javascript" src="signup.js"></script>
+    <script type="text/javascript" src="scripts/signup.js"></script>
   </body>
   </html>
