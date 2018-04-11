@@ -2,10 +2,8 @@
 
 ## PROJECT DESCRIPTION:
  This is a picture uploader app so users can, have an account where they can upload and track their pictures.
- ___
 
 ## INSTRUCTIONS:
-
 Here's what you need to do to get started:
    * Clone the repo onto your local machine using `git clone`
    * You'll then want to `npm install` for your dependencies
@@ -13,7 +11,6 @@ Here's what you need to do to get started:
    * Head to `localhost:9000` to arrive at the Welcome Page.
    * Click Sign-up, fill out the form, and submit.
    * You can then upload your image from the profile page as well as logout.
-___
 
 ## TECHNOLOGIES USED IN THIS PROJECT:
  These are all the technologies you're going to need in order to run this project:
@@ -23,11 +20,9 @@ ___
   * Passport JS
   * AWS S3
   * Multer
-___
 
 ## USER STORIES:
  User stories help capture, define and communicate, the requirements of a system, in plain english format.
-___
 
 > _As a user, I want to track my memories, I'd like to create an account on the full stack photo app._
 
