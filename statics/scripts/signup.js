@@ -18,6 +18,7 @@ $(function() {
       "password": password.val()
     }
 
+<<<<<<< HEAD
     $.ajax({
       url: '/signUp',
       type: 'POST',
@@ -28,11 +29,18 @@ $(function() {
         //post request to my server
         window.location = '/profile';
       }
+=======
+    $.post('/signup', dataToSend, (data) => {
+      console.log(data);
+>>>>>>> db58ba9dd70270aaaa5e0bf6e2193982c075464d
     });
 
 
 
   })
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> db58ba9dd70270aaaa5e0bf6e2193982c075464d
 });

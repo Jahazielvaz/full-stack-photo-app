@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
  * Cookies.js - 1.2.3
+=======
+ * Cookies.js - 1.2.0
+>>>>>>> db58ba9dd70270aaaa5e0bf6e2193982c075464d
  * https://github.com/ScottHamper/Cookies
  *
  * This is free and unencumbered software released into the public domain.
@@ -23,7 +27,11 @@
         // Used to ensure cookie keys do not collide with
         // built-in `Object` properties
         Cookies._cacheKeyPrefix = 'cookey.'; // Hurr hurr, :)
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> db58ba9dd70270aaaa5e0bf6e2193982c075464d
         Cookies._maxExpireDate = new Date('Fri, 31 Dec 9999 23:59:59 UTC');
 
         Cookies.defaults = {
@@ -36,9 +44,13 @@
                 Cookies._renewCache();
             }
 
+<<<<<<< HEAD
             var value = Cookies._cache[Cookies._cacheKeyPrefix + key];
 
             return value === undefined ? undefined : decodeURIComponent(value);
+=======
+            return Cookies._cache[Cookies._cacheKeyPrefix + key];
+>>>>>>> db58ba9dd70270aaaa5e0bf6e2193982c075464d
         };
 
         Cookies.set = function (key, value, options) {
@@ -121,6 +133,7 @@
             // IE omits the "=" when the cookie value is an empty string
             separatorIndex = separatorIndex < 0 ? cookieString.length : separatorIndex;
 
+<<<<<<< HEAD
             var key = cookieString.substr(0, separatorIndex);
             var decodedKey;
             try {
@@ -134,6 +147,11 @@
             return {
                 key: decodedKey,
                 value: cookieString.substr(separatorIndex + 1) // Defer decoding value until accessed
+=======
+            return {
+                key: decodeURIComponent(cookieString.substr(0, separatorIndex)),
+                value: decodeURIComponent(cookieString.substr(separatorIndex + 1))
+>>>>>>> db58ba9dd70270aaaa5e0bf6e2193982c075464d
             };
         };
 
@@ -153,7 +171,12 @@
 
         return Cookies;
     };
+<<<<<<< HEAD
     var cookiesExport = (global && typeof global.document === 'object') ? factory(global) : factory;
+=======
+
+    var cookiesExport = typeof global.document === 'object' ? factory(global) : factory;
+>>>>>>> db58ba9dd70270aaaa5e0bf6e2193982c075464d
 
     // AMD support
     if (typeof define === 'function' && define.amd) {
@@ -169,4 +192,8 @@
     } else {
         global.Cookies = cookiesExport;
     }
+<<<<<<< HEAD
 })(typeof window === 'undefined' ? this : window);
+=======
+})(typeof window === 'undefined' ? this : window);
+>>>>>>> db58ba9dd70270aaaa5e0bf6e2193982c075464d
