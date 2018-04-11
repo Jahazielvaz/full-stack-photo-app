@@ -9,19 +9,20 @@
 
 
 ## INSTRUCTIONS:
-##### This is a basic set of instructions to get you started on running this app on your local machine.
--------------------------------------------------------------------------------------------------------------
 
-
+Here's what you need to do to get started:
+   * Clone the repo onto your local machine using `git clone`
+   * You'll then want to `npm install` for your dependencies
+___
 
 ## TECHNOLOGIES USED IN THIS PROJECT:
-##### These are all the technologies you're going to need in order to run this project
--------------------------------------------------------------------------------------------------------------
-
+ These are all the technologies you're going to need in order to run this project
+___
 
 ## USER STORIES:
-##### User stories help capture, define and communicate, the requirements of a system, in plain english format.
--------------------------------------------------------------------------------------------------------------
+ User stories help capture, define and communicate, the requirements of a system, in plain english format.
+___
+
 _As a user, I want to track my memories, I'd like to create an account on the full stack photo app._
 
 _As a user, I want to be able to access my personal account on this app, therefore I'd like to log in to my account._
