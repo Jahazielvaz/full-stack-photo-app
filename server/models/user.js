@@ -1,41 +1,38 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var User = sequelize.define('User', {
-    firstName: {
+    id: {
+      allowNull: false,
+      primaryKey: true,
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4
+    },
+    first_name: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    lastName: {
+    last_name: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    userName {
+    user_name: {
       type: DataTypes.STRING,
-      validate: {
-        min: 5
-      }
+      allowNull: false
     },
     email: {
       type: DataTypes.STRING,
-      validate: {
-        isEmail: true
-      }
+      allowNull: false
     },
     password: {
       type: DataTypes.STRING,
-      validate: {
-        min: 8,
-        is: '^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$'
+      allowNull: false
+    }
+  }, {
+    classMethods: {
+      associate: (models) => {
       }
     }
   });
-
-  User.associate = (models) => {
-    User.hasMany(models.imagePost, {
-      foreignKey: 'userId',
-      as: 'Users',
-    });
-  };
 
   return User;
 };
