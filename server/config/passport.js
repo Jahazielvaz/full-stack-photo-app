@@ -1,3 +1,4 @@
+
 /*
 Add your passport strategy in your config folder, along side your config.json
 The only thing we have to bring from our other files is the model, in this case,
