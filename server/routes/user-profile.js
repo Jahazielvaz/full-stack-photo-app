@@ -22,8 +22,6 @@ var upload = multer({
   });
 
 
-
-
 module.exports = (app, passport, isLoggedIn) => {
 
   app.get('/profile', isLoggedIn, (req, res, next) => {
@@ -34,17 +32,14 @@ module.exports = (app, passport, isLoggedIn) => {
   });
 
   app.post('/profile', upload.single('img-upload'), (req, res) => {
-    const img = {
-      value: fileKey
-    }
-    res.render('profile', {  user: req.user, imgSrc: img.value});
+    res.redirect('back');
     console.log(fileKey);
-  })
+  });
 
   app.get('/logout', (req, res) => {
     req.logout();
     res.redirect('/');
-  })
+  });
 
 
 }
